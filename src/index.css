@@ -8,9 +8,9 @@
   }
 
   h1 {
-    @apply text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+    @apply text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent;
   }
-  
+
   p {
     @apply text-lg text-gray-700 mb-6 leading-relaxed;
   }
@@ -18,17 +18,30 @@
   strong {
     @apply text-gray-900 font-semibold;
   }
-  
+
   ul {
     @apply space-y-3 mb-6;
   }
-  
+
   li {
     @apply text-gray-700 pl-2 relative flex items-center;
-    @apply before:content-[''] before:absolute before:w-1.5 before:h-1.5 before:bg-blue-500 before:rounded-full before:-left-4;
+    @apply before:content-[''] before:absolute before:w-1.5 before:h-1.5 before:bg-primary before:rounded-full before:-left-4;
   }
 }
 
 .slide-transition {
   @apply transition-all duration-300 ease-in-out;
+}
+
+/* Scrollbar'ı gizle */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* IE ve Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+/* Webkit (Chrome, Safari, Opera) için scrollbar'ı gizle */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
 }

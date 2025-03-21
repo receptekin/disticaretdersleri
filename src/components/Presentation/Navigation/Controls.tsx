@@ -13,21 +13,21 @@ export const Controls: React.FC<SlideControlsProps> = ({
       <button
         onClick={onPrevious}
         disabled={currentSlide === 0}
-        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700
+        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary-dark
                    text-white rounded-xl disabled:opacity-50 disabled:cursor-not-allowed
                    hover:shadow-lg transform hover:-translate-x-0.5 transition-all duration-200"
       >
         <FiArrowLeft className="w-5 h-5" /> Önceki
       </button>
-      
-      <span className="text-gray-600 font-medium bg-gray-50 px-4 py-2 rounded-lg">
+
+      <span className="text-primary font-medium bg-secondary/10 px-4 py-2 rounded-lg">
         {currentSlide + 1} / {totalSlides}
       </span>
-      
+
       <button
         onClick={onNext}
         disabled={currentSlide === totalSlides - 1}
-        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-blue-700
+        className="flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-primary to-primary-dark
                    text-white rounded-xl disabled:opacity-50 disabled:cursor-not-allowed
                    hover:shadow-lg transform hover:translate-x-0.5 transition-all duration-200"
       >

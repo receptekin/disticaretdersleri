@@ -15,6 +15,7 @@ export interface PresentationProps {
   slides: Slide[];
   onPrevious: () => void;
   onNext: () => void;
+  isLoading?: boolean;
 }
 
 export interface SlideControlsProps {
