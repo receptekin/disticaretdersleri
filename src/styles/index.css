@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+
+  h1 {
+    @apply text-4xl font-bold text-gray-900 mb-8 bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+  
+  p {
+    @apply text-lg text-gray-700 mb-6 leading-relaxed;
+  }
+
+  strong {
+    @apply text-gray-900 font-semibold;
+  }
+  
+  ul {
+    @apply space-y-3 mb-6;
+  }
+  
+  li {
+    @apply text-gray-700 pl-2 relative flex items-center;
+    @apply before:content-[''] before:absolute before:w-1.5 before:h-1.5 before:bg-blue-500 before:rounded-full before:-left-4;
+  }
+}
+
+@layer components {
+  .slide-container {
+    @apply flex-1 p-12 bg-gradient-to-br from-gray-50 to-gray-100;
+  }
+
+  .slide-content {
+    @apply bg-white p-12 rounded-2xl shadow-xl max-w-4xl w-full mx-auto
+           border border-gray-100 hover:shadow-2xl transition-shadow duration-300;
+  }
+
+  .slide-transition {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+@layer utilities {
+  .gradient-text {
+    @apply bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent;
+  }
+}
